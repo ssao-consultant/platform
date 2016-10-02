@@ -1,0 +1,42 @@
+
+<ion-view>
+  <ion-content class="has-header body-color">
+  	<div ng-show="errorMsg.length > 0" class="cl_error">
+		<i class="icon ion-close-circled"></i> 
+		{{ errorMsg}}
+	</div>
+	<ul class="list" style="margin-top:20%;">
+		
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-ios7-email-outline placeholder-icon"></i>
+				<input type="text" placeholder=".edu Email Address" ng-model="loginDetail.userName">
+			</label>	
+		</div>
+
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-locked placeholder-icon"></i>
+				<input type="password" placeholder="password" ng-model="loginDetail.password">
+			</label>	
+		</div>
+		
+		<p align="center">
+			<button class="login button-royal" ng-click="login()">Login&nbsp;&nbsp;</button>
+		<p>
+		<p align="center">
+			<button class="button button-dark button-small button-clear question">Still&nbsp;need&nbsp;an&nbsp;account?</button>
+		</p>
+		<p align="center" style="margin-top: -10px;">	
+			<button class = "sign-up button-light fore-color" ng-click="goToCreateAccount()">Sign&nbsp;up</button>
+		</p>
+		<!-- <p align="center">	
+			<button class = "get-connected button-light fore-color" ng-click="goToGetConnected()">Get Connected</button>
+		</p> -->
+		<!--<span style="padding-left:25%;">Forgot password ?       <a href="#/app/forgot_password">Retrieve Password</a></span>-->
+		
+	</ul>    
+   
+  </ion-content>
+
+</ion-view>

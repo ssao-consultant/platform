@@ -1,0 +1,57 @@
+
+
+	<div class="bar bar-header bar-royal">
+  		<h1 class="title" style=" font-size: 30px;">Customize</h1>
+	</div>
+	
+	<ion-nav-buttons side="left">
+    	<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  	</ion-nav-buttons>
+  
+  	<div circular-menu subtags="subtagsArr" selectedtags="selectedTagsArr" mypagekey="friends"></div>
+  
+  	
+  	<ion-content class="has-header">
+  		
+  		<div class="list">
+		 
+			<div class="item item-input item-select body-color" style = " margin:50px;">
+			    <div class="input-label" >
+			      University
+			    </div>
+				<select class="item-input-wrapper" ng-model="university">
+		      		<option value="{{ school.id }}" ng-repeat="school in schools">{{school.comment}}</option>
+		    	</select>
+		    </div>
+	    </div>
+	    
+  		<div water-wheel-carousel clcontext="carousel"></div>
+  		
+  		<span>Selected Tags</span>
+  		<div class="card">
+            <span class="tagItem" ng-repeat="tag in tags" style =" width: 50px; height: 50px;"> {{ tag.tagText }} <a ng-click="removeTag( '{{ tag.tagId}}' )"><i class="icon ion-close-round"></i></a></span>
+        </div>
+              
+  		<div class="item tabs tabs-secondary tabs-icon-left" style = " background-color: #8a6de9;">
+          <a ng-click="menu('#social', user.posts.popularPost.tags)" class="tab-item">
+            <i class="icon ion-android-friends" style =" color: white;"></i>
+            Social Life
+          </a>
+          <a ng-click="menu('#genre', user.posts.popularPost.tags)" class="tab-item">
+            <i class="icon ion-beer" style = " color: white;"></i>
+            Rated R
+          </a>
+          <a ng-click="menu('#smart', user.posts.popularPost.tags)" class="tab-item">
+            <i class="icon ion-university" style = " color: white;"></i>
+            Smart
+          </a>
+          <a ng-click="menu('#customTag', user.posts.popularPost.tags)" class="tab-item">
+            <i class="icon ion-pricetag" style = " color: white;"></i>
+            Custom Tag
+          </a>
+        </div>
+  	</ion-content>
+  	
+
+
+

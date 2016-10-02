@@ -1,0 +1,24 @@
+
+<header-bar-feed></header-bar-feed>
+
+<ion-view>
+
+	
+
+  	<ion-content>
+  	 	<ul class="list">
+		  	<li class="item" style="padding:0px; border:none;" ng-repeat="user in schoolUsers" >
+	      
+		  		<post-content post="user.post" user="user" clhost="{{clhost}}" level="S"></post-content>
+			</li>
+
+		</ul>
+
+		<slide-page></slide-page>
+	</ion-content>
+	
+	
+	
+	<footer-bar-feed></footer-bar-feed>
+
+</ion-view>

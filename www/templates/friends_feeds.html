@@ -1,0 +1,37 @@
+  	
+<header-bar-feed></header-bar-feed>
+  		
+<ion-view>
+
+	
+
+	<ion-content has-subheader="true" has-header="true">
+	
+		 <ul class="list" >
+		 	<li class="item" style="padding: 0px; border:none;" ng-repeat="user in users">
+			  	<!-- 
+			  		commented to support Facebook display of 10 most recent images vertically instead of left, right and center
+			  	<ion-slide-box on-slide-changed="slideHasChanged($index, user.posts)" active-slide="moteActiveSlide" show-pager="false">
+			  	
+			  		<ion-slide >
+			  			<post-content post="user.posts.popularPost" user="user" clhost="{{clhost}}" level="F"></post-content>
+			  		</ion-slide>
+			  		<ion-slide>
+			  			<post-content post="user.posts.currentPost" user="user" clhost="{{clhost}}" level="F"></post-content>
+			  		</ion-slide>
+			  		<ion-slide>
+			  			<post-content post="user.posts.mostRecentPost" user="user" clhost="{{clhost}}" level="F"></post-content>
+			  		</ion-slide>
+			  	</ion-slide-box>-->
+			  	<post-content post="user.posts.currentPost" user="user" clhost="{{clhost}}" level="F"></post-content>
+			</li>
+		</ul>
+		
+		<slide-page></slide-page>
+		
+	</ion-content>
+		
+	<footer-bar-feed></footer-bar-feed>
+	
+</ion-view>
+
